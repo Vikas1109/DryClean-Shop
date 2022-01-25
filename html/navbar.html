@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arun's Ironing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+
+<style>
+    
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Montserrat:ital,wght@0,200;0,400;1,200;1,300;1,400;1,500&display=swap');
+
+*{
+    margin: 0;
+    padding:0 ;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+/* utility classes */
+
+.container{
+    max-width: 1200px;
+    width: 90%;
+   padding: 0 5rem;
+    margin:0 auto;
+}
+
+
+
+/* navabar styling */
+
+
+.navbar{
+    background-color:#f6b319 ;
+    height:200px;
+    align-items: center;
+    display: flex;
+    
+}
+
+.second{
+    display: block;
+    width: 100px;
+    height:100px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 50%;
+    border: 2px solid #3F0C1F;
+    margin-top: 5px;
+}
+
+.logotext{
+    color: whitesmoke;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.specialtext{
+    color: #581845 ;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.estd{
+    font-size: 20px;
+    color: #581845;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+ .links{
+    display: flex;
+    list-style: none;
+    transform: translateX(-40%);
+ }
+
+
+ .links a{
+     text-decoration: none;
+     text-transform: uppercase;
+    margin: 0 2rem;
+     font-size: 20px;
+   font-weight: 600;
+   padding: 10px 12px;
+   border-radius: 10px;
+   text-align: center;
+   color: #581845;
+ }
+
+ 
+
+ .links a:hover{
+     background-color: whitesmoke;
+
+ }
+
+
+ /* responsive navbr */
+
+
+ .toggle{
+     display: none;
+ }
+
+
+ /* for large device */
+
+
+ @media (max-width:1100px){
+     html{
+         font-size: 70%;
+     }
+
+     .links{
+         transform: translateX(-10%);
+     }
+ }
+
+
+
+ /* for mobile */
+
+
+ @media screen and (max-width:815px) {
+
+    .navbar{
+        position: relative;
+    }
+   
+    .menu-btn{
+        display: block;
+        position: absolute;
+       
+       right: 10%;
+        
+    }
+
+    #click{
+        display: none;
+    }
+
+    .links{
+        display: block;
+        position: fixed;
+        top: 190px;
+        height: 50vh;
+        background-color: #f6b319;
+        width: 115%;
+        left: 150%;                               /* strike point*/
+      
+
+
+    }
+
+    .links i{
+        display: block;
+        
+
+    }
+
+ 
+
+
+    #click:checked ~ .links{
+        left: 0;                                        /* strike point*/
+      
+        transition: all 0.5s ease-in-out;
+      }
+     
+      #click:checked ~ .menu-btn i::before{
+        content: "\f00d";
+      }
+     
+ }
+
+</style>
+<body>
+    
+    <nav class="navbar">
+        <div class="container logo">
+            <span class="logotext"><span class="specialtext">A</span>run<span class="specialtext">I</span>roning</span>
+            <div class="logo-img">
+               
+                <img src="../images/sicelogo.jpg" alt="" class="second">
+            </div>
+            <span class="estd">Since. 1991</span>
+        </div>
+
+      
+
+        
+               
+            <input type="checkbox" name="" id="click" >
+
+            <label for="click" class="menu-btn">
+        
+              <i class="fas fa-bars fa-2x"></i>
+            </label>
+        
+
+        
+        <div class="menu-links">
+
+            <ul class="links">
+                <a href=""><i class="fas fa-home"></i>
+                    <li>home</li>
+                </a>
+                <a href=""><i class="fas fa-info-circle "></i>
+                    <li>about</li>
+                </a>
+                <a href=""><i class="fas fa-user-cog "></i>
+                    <li>services</li>
+                </a>
+                <a href=""><i class="fas fa-envelope "></i>
+                    <li>contact</li>
+                </a>
+               
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- <script>
+
+function myfun() {
+  var x = document.getElementsByClassName("links");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+    </script> -->
+</body>
+</html>
